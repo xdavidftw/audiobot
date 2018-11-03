@@ -141,7 +141,7 @@ async def volume(ctx, vol:float):
 
 @bot.command(pass_context=True)
 async def skip(ctx): 
-  songs[int(ctx.message.server.id)]
+  songs[ctx.message.servers.id].skip()
        
 @bot.command(pass_context=True)
 async def stop(con):
