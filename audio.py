@@ -102,7 +102,11 @@ async def after_song(con,clear):
     bot.loop.create_task(queue_songs(con,clear))
     bot.loop.create_task(check_voice(con))
 
-
+@bot.event
+async def on_ready():
+    bot.loop.create_task(all_false())
+    await bot.change_presence(game=discord.Game(name='.help = как да ме ползваш'))
+    print(bot.user.name)    
 
 @bot.command(pass_context=True)
 async def play(con,*,url):
