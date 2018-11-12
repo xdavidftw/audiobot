@@ -4,6 +4,8 @@ import youtube_dl
 from discord.ext import commands
 import requests as rq
 
+BOT_TOKEN = os.environ['BOT_TOKEN']
+
 bot = commands.Bot(command_prefix=';')
 bot.remove_command('help')
 from discord import opus
@@ -218,4 +220,4 @@ async def resume(con):
                 paused[con.message.server.id]=False
 
 
-bot.run('NTA4MzEyNzM3NzQ3ODI4NzQ3.Dr9aqw.sbJluhVMsS834_fsWPMfWCsExhg')
+client.run(BOT_TOKEN)
