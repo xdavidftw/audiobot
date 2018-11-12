@@ -221,4 +221,4 @@ async def resume(con):
                 paused[con.message.server.id]=False
 
 
-client.run(BOT_TOKEN)
+bot.run(BOT_TOKEN)
